@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo solitaire</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="game-header">
+    <h1>Kell-Karol</h1>
+    <div class="game-stats">
+      <span>Pontos: <strong id="score">0</strong></span>
+      <span>Tempo: <strong id="timer">00:00</strong></span>
+      <button id="btn-restart">Novo Jogo</button>
+    </div>
+  </header>
+
+  <main class="game-board">
+    <!-- Área Superior -->
+    <div class="top-section">
+      <div class="deck-area">
+        <div id="stock-pile" class="pile stock"></div>
+        <div id="waste-pile" class="pile waste"></div>
+      </div>
+      <div class="foundations-area">
+        <div class="pile foundation" data-suit="spades"></div>
+        <div class="pile foundation" data-suit="hearts"></div>
+        <div class="pile foundation" data-suit="diamonds"></div>
+        <div class="pile foundation" data-suit="clubs"></div>
+      </div>
+    </div>
+
+    <!-- Área Principal (Tableau - 7 colunas) -->
+    <div class="tableau-section">
+      <div class="tableau-column" data-column="0"></div>
+      <div class="tableau-column" data-column="1"></div>
+      <div class="tableau-column" data-column="2"></div>
+      <div class="tableau-column" data-column="3"></div>
+      <div class="tableau-column" data-column="4"></div>
+      <div class="tableau-column" data-column="5"></div>
+      <div class="tableau-column" data-column="6"></div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

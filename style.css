@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0d4a22; /* Verde clássico de mesa de cartas */
+  color: #fff;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.game-header {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.game-stats button {
+  padding: 8px 16px;
+  background-color: #f39c12;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.game-board {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.top-section, .tableau-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.deck-area, .foundations-area {
+  display: flex;
+  gap: 15px;
+}
+
+.pile {
+  width: 90px;
+  height: 130px;
+  border: 2px dashed rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  position: relative;
+}
+
+.tableau-section {
+  align-items: flex-start;
+}
+
+.tableau-column {
+  width: 90px;
+  min-height: 250px;
+  position: relative;
+}
+
+/* Estilo básico das cartas */
+.card {
+  width: 90px;
+  height: 130px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 6px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 6px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  cursor: grab;
+  user-select: none;
+}
+
+.card.red {
+  color: #c0392b;
+}
+
+.card.face-down {
+  background: linear-gradient(135deg, #2980b9, #1abc9c);
+}
